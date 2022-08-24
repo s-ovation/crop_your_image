@@ -441,6 +441,7 @@ class _CropEditorState extends State<_CropEditor> {
     return _isImageLoading
         ? Center(child: const CircularProgressIndicator())
         : Stack(
+            clipBehavior: Clip.none,
             children: [
               Listener(
                 onPointerDown: (_) => _pointerNum++,
